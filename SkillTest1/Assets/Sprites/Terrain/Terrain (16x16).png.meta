@@ -76,7 +76,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -90,7 +90,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -139,23 +139,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
+      name: Terrain (16x16)_14
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71c15134e17453044af09f3c60f14916
+      internalID: -86000489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
       name: Terrain (16x16)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 127
-        width: 81
-        height: 49
+        x: 112
+        y: 160
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1d8f6f139951b5cb0800000000000000
-      internalID: -4874278423985981231
+      spriteID: 74100bd8fe563e644a7a8e5989decfb6
+      internalID: 895043928
       vertices: []
       indices: 
       edges: []
@@ -164,20 +186,20 @@ TextureImporter:
       name: Terrain (16x16)_1
       rect:
         serializedVersion: 2
-        x: 95
-        y: 127
-        width: 82
-        height: 49
+        x: 128
+        y: 160
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d2171032970659220800000000000000
-      internalID: 2492004042214043949
+      spriteID: d27bd323b1095934993c024b0e72c24a
+      internalID: -368526601
       vertices: []
       indices: 
       edges: []
@@ -186,20 +208,20 @@ TextureImporter:
       name: Terrain (16x16)_2
       rect:
         serializedVersion: 2
-        x: 191
-        y: 127
-        width: 66
-        height: 49
+        x: 96
+        y: 144
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 001eeccfe51109570800000000000000
-      internalID: 8471289998749917440
+      spriteID: ae8cb82ac235bdd4588dae891c0cd06c
+      internalID: -1064600554
       vertices: []
       indices: 
       edges: []
@@ -208,20 +230,20 @@ TextureImporter:
       name: Terrain (16x16)_3
       rect:
         serializedVersion: 2
-        x: 271
-        y: 170
-        width: 50
-        height: 6
+        x: 112
+        y: 144
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c732079bf7af48500800000000000000
-      internalID: 397718093594370940
+      spriteID: 88577d53ab808ef4890bf2a41c7d4b19
+      internalID: 363245003
       vertices: []
       indices: 
       edges: []
@@ -230,20 +252,20 @@ TextureImporter:
       name: Terrain (16x16)_4
       rect:
         serializedVersion: 2
-        x: 271
-        y: 154
-        width: 50
-        height: 7
+        x: 128
+        y: 144
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2f430f42bdac27140800000000000000
-      internalID: 4716054802376701170
+      spriteID: b304b86166c5a9e458e22fd1dd84d48a
+      internalID: -1042002275
       vertices: []
       indices: 
       edges: []
@@ -252,20 +274,20 @@ TextureImporter:
       name: Terrain (16x16)_5
       rect:
         serializedVersion: 2
-        x: 271
-        y: 138
-        width: 50
-        height: 7
+        x: 96
+        y: 128
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0dca5d000d3ee5880800000000000000
-      internalID: -8620202154233844528
+      spriteID: db5099b382b67c54d9b045d81a21fc2e
+      internalID: 1622873409
       vertices: []
       indices: 
       edges: []
@@ -274,20 +296,20 @@ TextureImporter:
       name: Terrain (16x16)_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 63
-        width: 81
-        height: 50
+        x: 112
+        y: 128
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d8522f5ec7f0ea790800000000000000
-      internalID: -7517053698926566003
+      spriteID: 5c33cb7e368a8b84f8178ef30fdbbecd
+      internalID: -250494207
       vertices: []
       indices: 
       edges: []
@@ -296,20 +318,20 @@ TextureImporter:
       name: Terrain (16x16)_7
       rect:
         serializedVersion: 2
-        x: 95
-        y: 63
-        width: 82
-        height: 50
+        x: 128
+        y: 128
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1fe1437292a4ce920800000000000000
-      internalID: 3020870990670601969
+      spriteID: f19db28fedb9115439ac0141c8eff2c5
+      internalID: 1554988222
       vertices: []
       indices: 
       edges: []
@@ -318,20 +340,20 @@ TextureImporter:
       name: Terrain (16x16)_8
       rect:
         serializedVersion: 2
-        x: 191
-        y: 63
-        width: 66
-        height: 50
+        x: 144
+        y: 160
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: dcaed5dce35a56710800000000000000
-      internalID: 1685935324672158413
+      spriteID: e480f45db09aba74483da004c18dfece
+      internalID: -1771555675
       vertices: []
       indices: 
       edges: []
@@ -340,20 +362,20 @@ TextureImporter:
       name: Terrain (16x16)_9
       rect:
         serializedVersion: 2
-        x: 271
-        y: 63
-        width: 81
-        height: 50
+        x: 160
+        y: 160
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: dc9ba30bf1d545f60800000000000000
-      internalID: 8022139226935704013
+      spriteID: bbe6cc77cefde174d83be88fbd4e687e
+      internalID: -1265400471
       vertices: []
       indices: 
       edges: []
@@ -362,20 +384,20 @@ TextureImporter:
       name: Terrain (16x16)_10
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 81
-        height: 49
+        x: 144
+        y: 144
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 96d380719e70b8d40800000000000000
-      internalID: 5587568460378422633
+      spriteID: de6b01e6aaea58543bf32f0eb06061cb
+      internalID: -1565396369
       vertices: []
       indices: 
       edges: []
@@ -384,64 +406,20 @@ TextureImporter:
       name: Terrain (16x16)_11
       rect:
         serializedVersion: 2
-        x: 95
-        y: 0
-        width: 82
-        height: 49
+        x: 160
+        y: 144
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4b76fb74177273540800000000000000
-      internalID: 4987498479824627636
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terrain (16x16)_12
-      rect:
-        serializedVersion: 2
-        x: 191
-        y: 0
-        width: 66
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 82bea93fa4a7ee950800000000000000
-      internalID: 6480251376165907240
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terrain (16x16)_13
-      rect:
-        serializedVersion: 2
-        x: 271
-        y: 0
-        width: 66
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ec36e0073d93fe580800000000000000
-      internalID: -8795747966950415410
+      spriteID: e90b5cf808e25264fb7116fce2e6a951
+      internalID: 1242188307
       vertices: []
       indices: 
       edges: []
@@ -450,7 +428,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 386b3efe31eae61458387d78595ca2f9
     internalID: 0
     vertices: []
     indices: 
@@ -459,7 +437,21 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Terrain (16x16)_0: 895043928
+      Terrain (16x16)_1: -368526601
+      Terrain (16x16)_10: -1565396369
+      Terrain (16x16)_11: 1242188307
+      Terrain (16x16)_14: -86000489
+      Terrain (16x16)_15: 716942807
+      Terrain (16x16)_2: -1064600554
+      Terrain (16x16)_3: 363245003
+      Terrain (16x16)_4: -1042002275
+      Terrain (16x16)_5: 1622873409
+      Terrain (16x16)_6: -250494207
+      Terrain (16x16)_7: 1554988222
+      Terrain (16x16)_8: -1771555675
+      Terrain (16x16)_9: -1265400471
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

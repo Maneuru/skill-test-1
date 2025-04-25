@@ -3,12 +3,16 @@ using System.Collections;
 using UnityEngine;
 
 [Serializable]
+/// <summary>Struct to store Health and handle healing, damage and invulnerability</summary>
 public struct Health
 {
-    [SerializeField] private int maxHealth;
-    [SerializeField] private int currentHealth;
-    [SerializeField] private bool isInvulnerable;
-    private Coroutine invulnerabilityCoroutine;
+    // Private fields
+    private int maxHealth; // The maximun amount of health
+    private int currentHealth; // The current amount of health
+    private bool isInvulnerable; // Whether the character is invulnerable or not
+    private Coroutine invulnerabilityCoroutine; // Reference to invulnerability timer
+
+    // Readonly attributes
     public readonly int CurrentHealth => currentHealth;
     public readonly bool IsInvulnerable => isInvulnerable;
 
@@ -53,6 +57,12 @@ public struct Health
         }
 
         return true;
+    }
+
+    /// <summary></summary>
+    public void Die()
+    {
+
     }
 
     /// <summary>Activate <param name="caller">as</param> invulnerability</summary>
