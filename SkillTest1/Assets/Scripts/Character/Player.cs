@@ -22,10 +22,7 @@ public class Player : Character
         // Apply horizontal movement to rigidbody
         rigidbody2D.linearVelocityX = movement * movementSpeed;
 
-        if (!isGrounded)
-        {
-            DetectGround();
-        }
+        DetectGround();
         // If should jump them jump
         if (shouldJump)
         {

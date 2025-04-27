@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -28,6 +29,7 @@ public abstract class Character : MonoBehaviour
     protected bool isGrounded; // Whether the character is on the ground
 
     // Readonly properties
+    public Health Health => health;
     public bool isMoving => movement != 0;
     public float distanceToGround => collider2D.size.y / 2 + 0.02f;
 
@@ -43,7 +45,7 @@ public abstract class Character : MonoBehaviour
         movementSpeed = data.movementSpeed;
         jumpForce = data.jumpForce;
         groundMask = data.groundMask;
-        health = new(data.maxHealth);
+        health = new(this, data.maxHealth);
     }
 
     /// <summary>Update animator parameters</summary>
@@ -72,6 +74,10 @@ public abstract class Character : MonoBehaviour
         // Apply the force
         rigidbody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
     }
+
+    public void OnTookDamage() { animator.SetTrigger("Hit"); }
+    public void ActivateInvulnerability() {}
+    public void Die() {}
 
     /// <summary>The default action performed by the character</summary>
     protected abstract void PerformAction();
