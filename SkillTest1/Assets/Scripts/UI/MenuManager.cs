@@ -3,12 +3,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 /// <summary>Singleton that handles different UI</summary>
-public class UIManager : MonoBehaviour
+public class MenuManager : MonoBehaviour
 {
-    public static UIManager Instance { get; private set; }
+    public static MenuManager Instance { get; private set; }
 
     [Header("Menu References")]
-    [SerializeField] private SceneAsset mainMenuScene;
+    [SerializeField] private string mainMenuSceneName;
     [SerializeField] private GameObject defaultMenu;
     [SerializeField] private GameObject pause;
     [SerializeField] private GameObject win;
@@ -28,6 +28,14 @@ public class UIManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        // Ensure maim menu scene is correctly assigned
+        // if (!SceneManager.GetSceneByName(mainMenuSceneName).IsValid())
+        // {
+        //     // Then throw an exception to interrupt MenuManager execution
+        //     var msg = $"{GetType().Name} needs a valid scene name for {nameof(mainMenuSceneName)}. In gameObject: {name}";
+        //     throw new(msg);
+        // }
     }
 
     private bool ActivateDefault()
@@ -90,7 +98,7 @@ public class UIManager : MonoBehaviour
     public void ToMainMenu()
     {
         CloseCurrentMenu();
-        SceneManager.LoadScene(mainMenuScene.name);
+        SceneManager.LoadScene(mainMenuSceneName);
     }
 
     public void Resume()

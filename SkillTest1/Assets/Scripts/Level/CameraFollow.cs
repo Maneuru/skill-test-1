@@ -9,7 +9,6 @@ public class CameraFollow : MonoBehaviour
     private void Update()
     {
         Vector2 direction = (target.position + (Vector3)offset - transform.position).normalized;
-        transform.position +=  speed * Time.deltaTime * (Vector3)direction;
-
+        transform.position +=  speed * Time.unscaledDeltaTime * (Vector3)direction;
     }
 }

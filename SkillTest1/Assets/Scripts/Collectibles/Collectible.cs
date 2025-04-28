@@ -18,6 +18,7 @@ public class Collectible : MonoBehaviour
 
     // Private fields
     private Vector3 originalPosition;
+    private bool used;
 
     private void Awake()
     {
@@ -30,6 +31,7 @@ public class Collectible : MonoBehaviour
         transform.position = originalPosition + maxExcursion * Mathf.Sin(Time.time * speed) * Vector3.up;
     }
 
+    /// <summary>Destroy gameobject on when collected</summary>
     public void OnCollect()
     {
         Destroy(gameObject);
@@ -37,9 +39,19 @@ public class Collectible : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        // Ensure if has already been used
+        if (used)
+        {
+            return;
+        }
+
         // Ensure there a Collector in `other` gameObject and call `CollectItem`
         if (other.TryGetComponent(out Collector collector))
         {
+            // Set that collectible has been used
+            used = true;
+
+            // Collect throught collector
             collector.CollectItem(data);
             animator.SetTrigger("Collect");
         }

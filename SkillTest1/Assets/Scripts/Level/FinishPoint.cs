@@ -5,9 +5,19 @@ public class FinishPoint : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.HasComponent<Player>())
+        // Ensure win condition is satisfied
+        if (!GameManager.Instance.hasWinCondition)
         {
-            GameEvents.playerWin.Invoke();
+            return;
         }
+
+        // Ensure `other` is the player
+        if (!other.HasComponent<Player>())
+        {
+            return;
+        }
+
+        // Notify win
+        GameEvents.playerWin.Invoke();
     }
 }

@@ -11,9 +11,9 @@ public class Collector : MonoBehaviour
         // Ensure there's a character componet in the GameObject
         if (!TryGetComponent(out character))
         {
-            // Then log error and throw an exception to interrupt Collector execution
-            Debug.LogError($"Collector needs a character component in {name}");
-            throw new MissingComponentException();
+            // Then throw an exception to interrupt Collector execution
+            var msg = $"{GetType().Name} needs a {nameof(Character)} component. In gameObject: {name}";
+            throw new MissingComponentException(msg);
         }
     }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 [Serializable]
 /// <summary>Struct to store Health and handle healing, damage and invulnerability</summary>
-public struct Health
+public class Health
 {
     // Private fields
     private Character character; // The asociated character
@@ -14,9 +14,8 @@ public struct Health
     private Coroutine invulnerabilityCoroutine; // Reference to invulnerability timer
 
     // Readonly attributes
-    public readonly int CurrentHealth => currentHealth;
-    public readonly int MaxHealth => maxHealth;
-    public readonly bool IsInvulnerable => isInvulnerable;
+    public int CurrentHealth => currentHealth;
+    public bool IsInvulnerable => isInvulnerable;
 
     public Health(Character character, int maxHealth)
     {
@@ -38,7 +37,8 @@ public struct Health
         }
 
         // Apply `amount` to current health ensuring to not exceed `maxHealth`
-        currentHealth = Math.Min(currentHealth + amount, maxHealth);
+        currentHealth = Mathf.Min(currentHealth + amount, maxHealth);
+        GameEvents.healthChange.Invoke();
     }
 
     /// <summary>Deal damage to health</summary>
@@ -59,7 +59,8 @@ public struct Health
         if (damage > 0)
         {
             // Apply `damage` to current health ensuring to not go below 0
-            currentHealth = Math.Max(currentHealth - damage, 0);
+            currentHealth = Mathf.Max(currentHealth - damage, 0);
+            GameEvents.healthChange.Invoke();
 
             // Check if character is still alive
             if (currentHealth == 0)

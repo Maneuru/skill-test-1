@@ -41,6 +41,14 @@ public abstract class Character : MonoBehaviour
         renderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
 
+        // Ensure there's the character data
+        if (data == null)
+        {
+            // Then throw an exception to interrupt Character execution
+            var msg = $"{GetType().Name} needs a {nameof(CharacterData)} reference. In gameObject: {name}";
+            throw new MissingReferenceException(msg);
+        }
+
         // Retrieve all character data
         movementSpeed = data.movementSpeed;
         jumpForce = data.jumpForce;
@@ -54,7 +62,14 @@ public abstract class Character : MonoBehaviour
         animator.SetBool("isMoving", isMoving);
         animator.SetBool("isGrounded", isGrounded);
         animator.SetFloat("yVelocity", rigidbody2D.linearVelocity.y);
-        renderer.flipX = movement < 0;
+        if (movement > 0)
+        {
+            renderer.flipX = false;
+        }
+        else if (movement < 0)
+        {
+            renderer.flipX = true;
+        }
     }
 
     /// <summary>Detect the ground below the character</summary>
@@ -68,26 +83,41 @@ public abstract class Character : MonoBehaviour
     protected void Jump()
     {
         // Reset the intention to jump and set is not grounded
-        shouldJump = false;
         isGrounded = false;
+        shouldJump = false;
 
         // Apply the force
         rigidbody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
     }
 
-    public void OnTookDamage() { animator.SetTrigger("Hit"); }
-    public void ActivateInvulnerability() {}
-    public void Die() {}
-
     /// <summary>The default action performed by the character</summary>
     protected abstract void PerformAction();
 
+    /// <summary>Apply a force to knockback the character</summary>
+    /// <param name="force">The module of the force</param>
+    /// <param name="direction">The direction of the force</param>
+    /// <param name="ignoreInvulnerability">If the knockback should ignore invulnerability or not</param>
+    public void Knokback(float force, Vector3 direction, bool ignoreInvulnerability)
+    {
+        // Check for invulnerability considering `ignoreInvulnerability`
+        if (!ignoreInvulnerability && health.IsInvulnerable)
+        {
+            return;
+        }
+
+        // Apply the force to the rigidbody
+        rigidbody2D.AddForce(force * direction, ForceMode2D.Impulse);
+    }
+
     protected void OnDrawGizmosSelected()
     {
+        // Check if collider is assigned
         if (collider2D == null)
         {
             collider2D = GetComponent<CapsuleCollider2D>();
         }
+
+        // Draw the ray used by DetectGround()
         Gizmos.DrawRay(transform.position, Vector3.down * distanceToGround);
     }
 }

@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0292d19577e1b174f85e961b54ebcb06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameScene: {fileID: 102900000, guid: 8c9cfa26abfee488c85f1582747f6a02, type: 3}
+  gameSceneName: Game
 --- !u!1001 &1043165927
 PrefabInstance:
   m_ObjectHideFlags: 0
