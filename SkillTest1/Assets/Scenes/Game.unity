@@ -84940,6 +84940,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageDealt: 0
   knockbackForce: 0
+  applyKnockback: 1
   killOnContact: 1
   ignoreInvulnerability: 1
 --- !u!1001 &1303612572
@@ -85915,6 +85916,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 2cc902b1004d3004ab8190d552718c73, type: 2}
+    - target: {fileID: 4400116447816224357, guid: f71a4eb653398c049ac95ba8f2933e43, type: 3}
+      propertyPath: applyKnockback
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4400116447816224357, guid: f71a4eb653398c049ac95ba8f2933e43, type: 3}
       propertyPath: knockbackForce
       value: 5
